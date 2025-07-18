@@ -6,7 +6,7 @@ from gemini import generate_gemini_response
 st.set_page_config(page_title="School Dropout Predictor AI", layout="centered")
 
 # Load trained model
-model = joblib.load("model.pkl")
+model = joblib.load("dropout_model.pkl")
 
 st.title("📚 School Dropout Predictor AI")
 
