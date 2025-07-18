@@ -19,8 +19,8 @@ with st.form("input_form"):
     attendance = st.slider("Attendance Rate", 0, 100, 75)
     behaviour = st.slider("Behavioural Rating", 0, 100, 70)
     study_time = st.slider("Study Time", 0, 40, 10)
-    support = st.selectbox("Parental Support", ["No", "Yes"])
-    paid_class = st.selectbox("Extra Paid Class", ["No", "Yes"])
+    support = st.selectbox("Parental Support", ["NO", "YES"])
+    paid_class = st.selectbox("Extra Paid Class", ["NO", "YES"])
     submit = st.form_submit_button("Predict")
 
 if submit:
@@ -30,8 +30,8 @@ if submit:
         "Attendance Rate": attendance,
         "Behavioural Rating": behaviour,
         "Study Time": study_time,
-        "Parental Support": 1 if support == "Yes" else 0,
-        "Extra Paid Class": 1 if paid_class == "Yes" else 0,
+        "Parental Support": 1 if support == "YES" else 0,
+        "Extra Paid Class": 1 if paid_class == "YES" else 0,
     }])
 
     prediction = model.predict(input_df)[0]
